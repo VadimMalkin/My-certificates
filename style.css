@@ -1,0 +1,245 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    text-align: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: linear-gradient(150deg, #1ec1d0, #b41eff);
+}
+h1 
+{
+    font-size: 72px;
+    top: 15px;
+    color: azure;
+}
+.deck
+{
+    top: 10px;
+}
+.certificate
+{
+    margin: 0;
+    position: fixed;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1%;
+    width: 21vw;
+}
+.certificate img
+{
+    width: 100%;
+}
+.certificate div 
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+    visibility: hidden;
+    text-align: center;
+}
+
+
+.certificate:hover div
+{
+    visibility: visible;
+}
+#ibm
+{
+    animation: ibm 0.6s linear 1 forwards;
+}
+@keyframes ibm 
+{
+    0%
+    {
+        top: 0vh;
+        left: 0vw;
+        rotate: 0deg;
+    }
+    50%
+    {
+        top: 80vh;
+        left: 30vw;
+        rotate: 180deg;
+    }
+    100%
+    {
+        top: 17vh;
+        left: 70vw;
+        rotate: 370deg;
+    }    
+}
+#google
+{
+    animation: google 0.5s linear 1 forwards;
+}
+@keyframes google 
+{
+    0%
+    {
+        top: 0vh;
+        left: 0vw;
+        rotate: 0deg;
+    }
+    100%
+    {
+        top: 15vh;
+        left: 40vw;
+        rotate: 365deg;
+    }    
+}
+#web
+{
+    animation: web 0.4s linear 1 forwards;
+}
+@keyframes web 
+{
+    0%
+    {
+        top: 0vh;
+        left: 0vw;
+        rotate: -180deg;
+    }
+    100%
+    {
+        top: 60vh;
+        left: 15vw;
+        rotate: 30deg;
+    }    
+}
+#ios
+{
+    animation: ios 0.4s linear 1 forwards;
+}
+@keyframes ios 
+{
+    0%
+    {
+        top: 0vh;
+        left: 0vw;
+        rotate: 0deg;
+    }
+    100%
+    {
+        top: 14vh;
+        left: 12vw;
+        rotate: 345deg;
+    }    
+}
+#blockchain
+{
+    animation: blockchain 0.5s linear 1 forwards;
+}
+@keyframes blockchain
+{
+    0%
+    {
+        top: 0vh;
+        left: 0vw;
+        rotate: 0deg;
+    }
+    100%
+    {
+        top: 60vh;
+        left: 50vw;
+        rotate: 340deg;
+    }
+}
+#selected
+{
+    position: absolute;
+    top: 22vh;
+    left: 30vw;
+    width: 40vw;
+}
+#selected img
+{
+    width: 100%;
+    border: solid black;
+    border-radius: 1%;
+}
+
+@media screen and (max-width: 600px)
+{
+    body 
+    {
+        background: linear-gradient(150deg, #1ec1d0, #b41eff);
+    }
+    .certificate
+    {
+        position: relative;
+        width: 70vw;
+        margin-top: 12px;
+
+    }
+    #selected
+    {
+        width: 80vw;
+        position: absolute;
+        top: none;
+        left: 10vw;
+    }
+    #ibm
+    {
+        animation: none;
+    }
+    #google
+    {
+        animation: none;
+    }
+    #ios
+    {
+        animation: none;
+    }
+    #web
+    {
+        animation: none;
+    }
+    #blockchain
+    {
+        animation: none;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 601px)
+{
+    .certificate
+    {
+        position: relative;
+        width: 30vw;
+        margin: 50px 1vw 0 1vw;
+
+    }
+    #selected
+    {
+        width: 60vw;
+        position: absolute;
+        top: none;
+        left: 20vw;
+    }
+    #ibm
+    {
+        animation: none;
+    }
+    #google
+    {
+        animation: none;
+    }
+    #ios
+    {
+        animation: none;
+    }
+    #web
+    {
+        animation: none;
+    }
+    #blockchain
+    {
+        animation: none;
+    }
+}

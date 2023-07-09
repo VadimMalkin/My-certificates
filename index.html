@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+        <title>Certificates</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="background" style="width: 100vw; height: 100vh;">
+            <h1>My Certificates</h1>
+            <div class="deck">
+                <button id="blockchain" class="certificate" onclick="onButtonClick('blockchain')"><div><h2>Blockchain</h2></div><img src="img/blockchain.jpg"></button>
+                <button id="ios" class="certificate" onclick="onButtonClick('ios')"><div><h2>Swift 5 iOS Application Developer</h2></div><img src="img/ios.jpg"></button>
+                <button id="web" class="certificate" onclick="onButtonClick('web')"><div><h2>Web Design</h2></div><img src="img/web.jpg"></button>
+                <button id="google" class="certificate" onclick="onButtonClick('google')"><div><h2>Google IT Support</h2></div><img src="img/google.jpg"></button>
+                <button id="ibm" class="certificate" onclick="onButtonClick('ibm')"><div><h2>IBM Full Stack Software Developer</h2></div><img src="img/ibm.jpg"></button>
+            </div>
+        </div>
+        <div>
+            <a id="selected" target="_blank"></a>
+        </div>
+    </body>
+    <script>
+        var blockchainLink = 'https://coursera.org/verify/specialization/4HAPE5CRK354';
+        var iosLink = 'https://coursera.org/verify/specialization/5ZPFGMKHYRHT';
+        var webLink = 'https://coursera.org/verify/specialization/STPBGJS6RCUY';
+        var googleLink = 'https://coursera.org/verify/professional-cert/R5GFD8G4S6DR';
+        var ibmLink = 'https://coursera.org/verify/professional-cert/Y26QPR3T4UU7';
+        var idHolder = '';
+        
+        document.getElementById('background').addEventListener('click', onBodyClick);
+        
+        function onButtonClick(id, e) {
+            var element = document.getElementById(id);
+            var selected = document.getElementById('selected');
+            if (idHolder!='') {
+                var oldElement = document.getElementById(idHolder);
+                oldElement.appendChild(selected.firstChild);
+                oldElement.style.visibility = 'visible';
+            }
+            selected.setAttribute('href', eval(id+'Link'));
+            selected.appendChild(element.lastChild);
+            element.style.visibility = 'hidden';
+            idHolder = id;
+
+            var evt = e ? e : window.event;
+
+            if (evt.stopPropagation) {evt.stopPropagation();}
+            else {evt.cancelBubble=true;}   
+        }
+        function onBodyClick() {
+            console.log('jaja binx');
+            if (idHolder!='') {
+                console.log('jaja binx');
+                var selected = document.getElementById('selected');
+                var oldElement = document.getElementById(idHolder);
+                oldElement.appendChild(selected.firstChild);
+                oldElement.style.visibility = 'visible';
+                selected.removeAttribute('href');
+                idHolder = '';
+            }
+        }
+        </script>
+</html>
