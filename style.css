@@ -30,18 +30,7 @@ body
     margin: 10px;
     color: black;
 }
-.header .hire-button
-{
-    background-color: blue;
-    float: right;
-    padding: 10px 30px 10px 30px;
-    margin: 0 120px 0 0;
-    border-radius: 5%;
-}
-.header .hire-button a 
-{
-    color: white;
-}
+
 .header .logo
 {
     float: left;
@@ -81,8 +70,6 @@ h1
     visibility: hidden;
     text-align: center;
 }
-
-
 .certificate:hover div
 {
     visibility: visible;
@@ -200,6 +187,26 @@ h1
     width: 100%;
     border: solid black;
     border-radius: 1%;
+}
+.hire-me
+{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    animation: hire-me 0.3s linear 4s forwards;
+    
+}
+@keyframes hire-me
+{
+    0%
+    {
+        visibility: hidden;
+    }
+    100%
+    {
+        visibility: visible;
+    }
 }
 
 @media screen and (max-width: 600px)
