@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&family=Rubik:wght@300&display=swap');
 *
 {
     margin: 0;
@@ -11,15 +12,51 @@ body
     min-width: 100vw;
     background: linear-gradient(150deg, #1ec1d0, #b41eff);
 }
+.header
+{
+    font-family: Rubik, sans-serif;
+    display: inline;
+}
+.header a
+{
+    text-decoration: none;
+}
+.header .topnav
+{
+    margin: auto;
+}
+.header .topnav a
+{
+    margin: 10px;
+    color: black;
+}
+.header .hire-button
+{
+    background-color: blue;
+    float: right;
+    padding: 10px 30px 10px 30px;
+    margin: 0 120px 0 0;
+    border-radius: 5%;
+}
+.header .hire-button a 
+{
+    color: white;
+}
+.header .logo
+{
+    float: left;
+}
 h1 
 {
     font-size: 72px;
-    top: 15px;
     color: azure;
+    position: fixed;
+    left: 0;
+    right: 0;
 }
 .deck
 {
-    top: 10px;
+    top: 100px;
 }
 .certificate
 {
@@ -171,6 +208,12 @@ h1
     {
         background: linear-gradient(150deg, #1ec1d0, #b41eff);
     }
+    h1
+    {
+        position: static;
+        font-size: 72px;
+        color: azure;
+    }
     .certificate
     {
         position: relative;
@@ -208,6 +251,12 @@ h1
 }
 @media screen and (max-width: 1024px) and (min-width: 601px)
 {
+    h1
+    {
+        font-size: 72px;
+        color: azure;
+        position: static;
+    }
     .certificate
     {
         position: relative;
